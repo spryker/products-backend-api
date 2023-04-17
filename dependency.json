@@ -1,5 +1,5 @@
 {
     "include": {
-        "spryker/transfer": "Provides transfer objects strict functionality."
+        "spryker/transfer": "Provides transfer objects `AbstractAttributes` property type functionality."
     }
 }
