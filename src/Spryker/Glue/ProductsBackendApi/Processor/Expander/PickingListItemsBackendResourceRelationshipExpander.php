@@ -36,7 +36,7 @@ class PickingListItemsBackendResourceRelationshipExpander implements PickingList
     }
 
     /**
-     * @param list<\Generated\Shared\Transfer\GlueResourceTransfer> $glueResourceTransfers
+     * @param array<\Generated\Shared\Transfer\GlueResourceTransfer> $glueResourceTransfers
      * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
      *
      * @return void
@@ -58,7 +58,7 @@ class PickingListItemsBackendResourceRelationshipExpander implements PickingList
     }
 
     /**
-     * @param list<\Generated\Shared\Transfer\GlueResourceTransfer> $glueResourceTransfers
+     * @param array<\Generated\Shared\Transfer\GlueResourceTransfer> $glueResourceTransfers
      *
      * @return array<int, string>
      */
@@ -76,7 +76,7 @@ class PickingListItemsBackendResourceRelationshipExpander implements PickingList
     }
 
     /**
-     * @param list<\Generated\Shared\Transfer\GlueResourceTransfer> $glueResourceTransfers
+     * @param array<\Generated\Shared\Transfer\GlueResourceTransfer> $glueResourceTransfers
      * @param array<string, \Generated\Shared\Transfer\GlueRelationshipTransfer> $concreteProductRelationshipTransfersIndexedBySku
      *
      * @return void

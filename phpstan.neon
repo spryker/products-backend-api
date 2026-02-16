@@ -4,5 +4,3 @@ parameters:
         - '#Parameter \#1 \$jsonValue of method .+ProductsBackedApiToUtilEncodingServiceInterface\:\:decodeJson\(\) expects string, array given.#'
         -
             identifier: phpDoc.parseError
-        -
-            identifier: argument.type
