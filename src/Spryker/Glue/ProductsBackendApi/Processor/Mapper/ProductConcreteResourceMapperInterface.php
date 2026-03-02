@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\ProductConcreteResourceCollectionTransfer;
 
 interface ProductConcreteResourceMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteCollectionTransfer $productConcreteCollectionTransfer
-     * @param \Generated\Shared\Transfer\ProductConcreteResourceCollectionTransfer $productConcreteResourceCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteResourceCollectionTransfer
-     */
     public function mapProductConcreteCollectionTransferToProductConcreteResourceCollectionTransfer(
         ProductConcreteCollectionTransfer $productConcreteCollectionTransfer,
         ProductConcreteResourceCollectionTransfer $productConcreteResourceCollectionTransfer

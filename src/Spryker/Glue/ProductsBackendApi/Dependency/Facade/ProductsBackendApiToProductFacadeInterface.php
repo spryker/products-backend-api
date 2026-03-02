@@ -17,11 +17,6 @@ use Generated\Shared\Transfer\ProductUrlCriteriaFilterTransfer;
 
 interface ProductsBackendApiToProductFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductAbstractCriteriaTransfer $productAbstractCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductAbstractCollectionTransfer
-     */
     public function getProductAbstractCollection(ProductAbstractCriteriaTransfer $productAbstractCriteriaTransfer): ProductAbstractCollectionTransfer;
 
     /**
@@ -38,11 +33,6 @@ interface ProductsBackendApiToProductFacadeInterface
      */
     public function getProductUrls(ProductUrlCriteriaFilterTransfer $productUrlCriteriaFilterTransfer): array;
 
-    /**
-     * @param string $sku
-     *
-     * @return bool
-     */
     public function hasProductAbstract(string $sku): bool;
 
     /**
@@ -67,11 +57,6 @@ interface ProductsBackendApiToProductFacadeInterface
      */
     public function saveProduct(ProductAbstractTransfer $productAbstractTransfer, array $productConcreteCollection): int;
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteCriteriaTransfer $productConcreteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteCollectionTransfer
-     */
     public function getProductConcreteCollection(
         ProductConcreteCriteriaTransfer $productConcreteCriteriaTransfer
     ): ProductConcreteCollectionTransfer;

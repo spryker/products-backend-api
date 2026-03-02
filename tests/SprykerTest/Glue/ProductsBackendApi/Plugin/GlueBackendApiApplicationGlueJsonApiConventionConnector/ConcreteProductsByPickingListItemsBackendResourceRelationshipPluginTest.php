@@ -62,9 +62,6 @@ class ConcreteProductsByPickingListItemsBackendResourceRelationshipPluginTest ex
      */
     protected ProductsBackendApiTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -72,9 +69,6 @@ class ConcreteProductsByPickingListItemsBackendResourceRelationshipPluginTest ex
         $this->tester->configureTestStateMachine([static::DEFAULT_OMS_PROCESS_NAME]);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldAddPickingListItemsConcreteProductsRelationships(): void
     {
         // Arrange
@@ -135,11 +129,6 @@ class ConcreteProductsByPickingListItemsBackendResourceRelationshipPluginTest ex
         return $this->tester->havePickingList($pickingListTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PickingListTransfer $pickingListTransfer
-     *
-     * @return \Generated\Shared\Transfer\PickingListTransfer
-     */
     protected function getPickingList(PickingListTransfer $pickingListTransfer): PickingListTransfer
     {
         /** @var \Spryker\Zed\PickingList\Business\PickingListFacadeInterface $pickingListFacade */
@@ -152,11 +141,6 @@ class ConcreteProductsByPickingListItemsBackendResourceRelationshipPluginTest ex
         return $pickingListFacade->getPickingListCollection($pickingListCriteriaTransfer)->getPickingLists()->getIterator()->current();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     *
-     * @return \Generated\Shared\Transfer\PickingListItemTransfer
-     */
     protected function createPickingListItemTransfer(
         ProductConcreteTransfer $productConcreteTransfer
     ): PickingListItemTransfer {
@@ -177,11 +161,6 @@ class ConcreteProductsByPickingListItemsBackendResourceRelationshipPluginTest ex
         ]))->build();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PickingListTransfer $pickingListTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResourceTransfer
-     */
     protected function createGlueResourceTransfer(PickingListTransfer $pickingListTransfer): GlueResourceTransfer
     {
         $pickingListItemsBackendApiAttributesTransfer = (new PickingListItemsBackendApiAttributesTransfer())

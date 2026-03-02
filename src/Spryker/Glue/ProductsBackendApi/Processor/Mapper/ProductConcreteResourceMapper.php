@@ -16,12 +16,6 @@ use Spryker\Glue\ProductsBackendApi\ProductsBackendApiConfig;
 
 class ProductConcreteResourceMapper implements ProductConcreteResourceMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteCollectionTransfer $productConcreteCollectionTransfer
-     * @param \Generated\Shared\Transfer\ProductConcreteResourceCollectionTransfer $productConcreteResourceCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteResourceCollectionTransfer
-     */
     public function mapProductConcreteCollectionTransferToProductConcreteResourceCollectionTransfer(
         ProductConcreteCollectionTransfer $productConcreteCollectionTransfer,
         ProductConcreteResourceCollectionTransfer $productConcreteResourceCollectionTransfer
@@ -38,12 +32,6 @@ class ProductConcreteResourceMapper implements ProductConcreteResourceMapperInte
         return $productConcreteResourceCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     * @param \Generated\Shared\Transfer\GlueResourceTransfer $glueResourceTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResourceTransfer
-     */
     protected function mapProductConcreteTransferToGlueResourceTransfer(
         ProductConcreteTransfer $productConcreteTransfer,
         GlueResourceTransfer $glueResourceTransfer
@@ -59,12 +47,6 @@ class ProductConcreteResourceMapper implements ProductConcreteResourceMapperInte
             ->setAttributes($productConcretesBackendApiAttributesTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     * @param \Generated\Shared\Transfer\ProductConcretesBackendApiAttributesTransfer $productConcretesBackendApiAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcretesBackendApiAttributesTransfer
-     */
     protected function mapProductConcreteTransferToProductConcretesBackendApiAttributesTransfer(
         ProductConcreteTransfer $productConcreteTransfer,
         ProductConcretesBackendApiAttributesTransfer $productConcretesBackendApiAttributesTransfer

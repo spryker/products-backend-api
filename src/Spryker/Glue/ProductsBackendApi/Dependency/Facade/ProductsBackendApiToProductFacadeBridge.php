@@ -30,11 +30,6 @@ class ProductsBackendApiToProductFacadeBridge implements ProductsBackendApiToPro
         $this->productFacade = $productFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductAbstractCriteriaTransfer $productAbstractCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductAbstractCollectionTransfer
-     */
     public function getProductAbstractCollection(ProductAbstractCriteriaTransfer $productAbstractCriteriaTransfer): ProductAbstractCollectionTransfer
     {
         return $this->productFacade->getProductAbstractCollection($productAbstractCriteriaTransfer);
@@ -60,11 +55,6 @@ class ProductsBackendApiToProductFacadeBridge implements ProductsBackendApiToPro
         return $this->productFacade->getProductUrls($productUrlCriteriaFilterTransfer);
     }
 
-    /**
-     * @param string $sku
-     *
-     * @return bool
-     */
     public function hasProductAbstract(string $sku): bool
     {
         return $this->productFacade->hasProductAbstract($sku);
@@ -92,11 +82,6 @@ class ProductsBackendApiToProductFacadeBridge implements ProductsBackendApiToPro
         return $this->productFacade->saveProduct($productAbstractTransfer, $productConcreteCollection);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteCriteriaTransfer $productConcreteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteCollectionTransfer
-     */
     public function getProductConcreteCollection(
         ProductConcreteCriteriaTransfer $productConcreteCriteriaTransfer
     ): ProductConcreteCollectionTransfer {

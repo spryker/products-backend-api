@@ -28,10 +28,5 @@ interface ProductsBackendApiToProductCategoryFacadeInterface
      */
     public function removeProductCategoryMappings(int $idCategory, array $productIdsToUnAssign): void;
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductCategoryCriteriaTransfer $productCategoryCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductCategoryCollectionTransfer
-     */
     public function getProductCategoryCollection(ProductCategoryCriteriaTransfer $productCategoryCriteriaTransfer): ProductCategoryCollectionTransfer;
 }

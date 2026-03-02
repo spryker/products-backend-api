@@ -24,11 +24,6 @@ class ProductsBackendApiToLocaleFacadeBridge implements ProductsBackendApiToLoca
         $this->localeFacade = $localeFacade;
     }
 
-    /**
-     * @param string $localeName
-     *
-     * @return \Generated\Shared\Transfer\LocaleTransfer
-     */
     public function getLocale(string $localeName): LocaleTransfer
     {
         return $this->localeFacade->getLocale($localeName);

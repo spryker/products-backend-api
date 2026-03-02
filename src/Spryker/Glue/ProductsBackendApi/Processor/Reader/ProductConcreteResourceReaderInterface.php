@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ProductConcreteResourceCollectionTransfer;
 
 interface ProductConcreteResourceReaderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteCriteriaTransfer $productConcreteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteResourceCollectionTransfer
-     */
     public function getProductConcreteResourceCollection(
         ProductConcreteCriteriaTransfer $productConcreteCriteriaTransfer
     ): ProductConcreteResourceCollectionTransfer;

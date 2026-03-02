@@ -13,12 +13,6 @@ use Generated\Shared\Transfer\ProductsBackendApiAttributesTransfer;
 
 interface ProductAbstractCreatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function createProductAbstract(
         ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer,
         GlueRequestTransfer $glueRequestTransfer

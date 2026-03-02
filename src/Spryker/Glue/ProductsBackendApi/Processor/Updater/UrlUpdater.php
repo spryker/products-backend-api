@@ -27,10 +27,6 @@ class UrlUpdater implements UrlUpdaterInterface
      */
     protected ProductsBackendApiToLocaleFacadeInterface $localeFacade;
 
-    /**
-     * @param \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToUrlFacadeInterface $urlFacade
-     * @param \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToLocaleFacadeInterface $localeFacade
-     */
     public function __construct(
         ProductsBackendApiToUrlFacadeInterface $urlFacade,
         ProductsBackendApiToLocaleFacadeInterface $localeFacade

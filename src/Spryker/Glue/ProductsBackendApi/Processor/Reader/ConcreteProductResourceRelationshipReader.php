@@ -19,9 +19,6 @@ class ConcreteProductResourceRelationshipReader implements ConcreteProductResour
      */
     protected ProductConcreteResourceReaderInterface $productConcreteResourceReader;
 
-    /**
-     * @param \Spryker\Glue\ProductsBackendApi\Processor\Reader\ProductConcreteResourceReaderInterface $productConcreteResourceReader
-     */
     public function __construct(ProductConcreteResourceReaderInterface $productConcreteResourceReader)
     {
         $this->productConcreteResourceReader = $productConcreteResourceReader;

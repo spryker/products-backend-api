@@ -13,12 +13,6 @@ use Generated\Shared\Transfer\ProductsBackendApiAttributesTransfer;
 
 interface ProductAbstractMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer
-     * @param \Generated\Shared\Transfer\ProductAbstractTransfer $productAbstractTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductAbstractTransfer
-     */
     public function mapProductsBackendApiAttributesTransferToProductAbstractTransfer(
         ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer,
         ProductAbstractTransfer $productAbstractTransfer

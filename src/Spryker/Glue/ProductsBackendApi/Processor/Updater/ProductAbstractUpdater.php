@@ -48,13 +48,6 @@ class ProductAbstractUpdater implements ProductAbstractUpdaterInterface
      */
     protected UrlUpdaterInterface $urlUpdater;
 
-    /**
-     * @param \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToProductFacadeInterface $productFacade
-     * @param \Spryker\Glue\ProductsBackendApi\Processor\Reader\ProductAbstractReaderInterface $productAbstractReader
-     * @param \Spryker\Glue\ProductsBackendApi\Processor\Updater\CategoryUpdaterInterface $categoryUpdater
-     * @param \Spryker\Glue\ProductsBackendApi\Processor\Mapper\ProductAbstractMapperInterface $productAbstractMapper
-     * @param \Spryker\Glue\ProductsBackendApi\Processor\Updater\UrlUpdaterInterface $urlUpdater
-     */
     public function __construct(
         ProductsBackendApiToProductFacadeInterface $productFacade,
         ProductAbstractReaderInterface $productAbstractReader,
@@ -69,12 +62,6 @@ class ProductAbstractUpdater implements ProductAbstractUpdaterInterface
         $this->urlUpdater = $urlUpdater;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function updateProductAbstract(
         ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer,
         GlueRequestTransfer $glueRequestTransfer

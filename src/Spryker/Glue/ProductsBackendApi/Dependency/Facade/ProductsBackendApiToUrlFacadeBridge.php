@@ -26,31 +26,16 @@ class ProductsBackendApiToUrlFacadeBridge implements ProductsBackendApiToUrlFaca
         $this->urlFacade = $urlFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\UrlCriteriaTransfer $urlCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\UrlCollectionTransfer
-     */
     public function getUrlCollection(UrlCriteriaTransfer $urlCriteriaTransfer): UrlCollectionTransfer
     {
         return $this->urlFacade->getUrlCollection($urlCriteriaTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\UrlTransfer $urlTransfer
-     *
-     * @return \Generated\Shared\Transfer\UrlTransfer
-     */
     public function updateUrl(UrlTransfer $urlTransfer): UrlTransfer
     {
         return $this->urlFacade->updateUrl($urlTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\UrlTransfer $urlTransfer
-     *
-     * @return \Generated\Shared\Transfer\UrlTransfer
-     */
     public function createUrl(UrlTransfer $urlTransfer): UrlTransfer
     {
         return $this->urlFacade->createUrl($urlTransfer);

@@ -63,13 +63,6 @@ class ProductAbstractReader implements ProductAbstractReaderInterface
      */
     protected ProductsBackendApiToLocaleFacadeInterface $localeFacade;
 
-    /**
-     * @param \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToProductFacadeInterface $productFacade
-     * @param \Spryker\Glue\ProductsBackendApi\Dependency\Service\ProductsBackedApiToUtilEncodingServiceInterface $utilEncodingService
-     * @param \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToProductCategoryFacadeInterface $productCategoryFacade
-     * @param \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToProductImageFacadeInterface $productImageFacade
-     * @param \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToLocaleFacadeInterface $localeFacade
-     */
     public function __construct(
         ProductsBackendApiToProductFacadeInterface $productFacade,
         ProductsBackedApiToUtilEncodingServiceInterface $utilEncodingService,
@@ -84,11 +77,6 @@ class ProductAbstractReader implements ProductAbstractReaderInterface
         $this->localeFacade = $localeFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function getProductAbstractCollection(GlueRequestTransfer $glueRequestTransfer): GlueResponseTransfer
     {
         $productAbstractCriteriaTransfer = (new ProductAbstractCriteriaTransfer())
@@ -98,11 +86,6 @@ class ProductAbstractReader implements ProductAbstractReaderInterface
         return $this->readProductAbstractCollection($productAbstractCriteriaTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function getProductAbstract(GlueRequestTransfer $glueRequestTransfer): GlueResponseTransfer
     {
         $productAbstractCriteriaTransfer = (new ProductAbstractCriteriaTransfer())
@@ -114,11 +97,6 @@ class ProductAbstractReader implements ProductAbstractReaderInterface
         return $this->readProductAbstractCollection($productAbstractCriteriaTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductAbstractCriteriaTransfer $productAbstractCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function readProductAbstractCollection(ProductAbstractCriteriaTransfer $productAbstractCriteriaTransfer): GlueResponseTransfer
     {
         $productAbstractCriteriaTransfer->setProductAbstractRelations(
@@ -232,12 +210,6 @@ class ProductAbstractReader implements ProductAbstractReaderInterface
         return $glueResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer
-     * @param \Generated\Shared\Transfer\ProductAbstractTransfer $productAbstractTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductsBackendApiAttributesTransfer
-     */
     public function mapLocalizedAttributes(
         ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer,
         ProductAbstractTransfer $productAbstractTransfer
@@ -252,12 +224,6 @@ class ProductAbstractReader implements ProductAbstractReaderInterface
         return $productsBackendApiAttributesTransfer->setLocalizedAttributes(new ArrayObject($productLocalizedAttributesBackendApiAttributesTransfers));
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     * @param \Generated\Shared\Transfer\ProductConcretesBackendApiAttributesTransfer $productConcretesBackendApiAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcretesBackendApiAttributesTransfer
-     */
     protected function mapVariant(
         ProductConcreteTransfer $productConcreteTransfer,
         ProductConcretesBackendApiAttributesTransfer $productConcretesBackendApiAttributesTransfer

@@ -13,24 +13,9 @@ use Generated\Shared\Transfer\ProductAbstractCriteriaTransfer;
 
 interface ProductAbstractReaderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function getProductAbstractCollection(GlueRequestTransfer $glueRequestTransfer): GlueResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function getProductAbstract(GlueRequestTransfer $glueRequestTransfer): GlueResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductAbstractCriteriaTransfer $productAbstractCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function readProductAbstractCollection(ProductAbstractCriteriaTransfer $productAbstractCriteriaTransfer): GlueResponseTransfer;
 }

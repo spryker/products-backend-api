@@ -47,11 +47,6 @@ class ProductsBackendApiToProductCategoryFacadeBridge implements ProductsBackend
         $this->productCategoryFacade->removeProductCategoryMappings($idCategory, $productIdsToUnAssign);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductCategoryCriteriaTransfer $productCategoryCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductCategoryCollectionTransfer
-     */
     public function getProductCategoryCollection(ProductCategoryCriteriaTransfer $productCategoryCriteriaTransfer): ProductCategoryCollectionTransfer
     {
         return $this->productCategoryFacade->getProductCategoryCollection($productCategoryCriteriaTransfer);

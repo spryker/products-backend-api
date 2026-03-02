@@ -13,24 +13,9 @@ use Generated\Shared\Transfer\UrlTransfer;
 
 interface ProductsBackendApiToUrlFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\UrlCriteriaTransfer $urlCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\UrlCollectionTransfer
-     */
     public function getUrlCollection(UrlCriteriaTransfer $urlCriteriaTransfer): UrlCollectionTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\UrlTransfer $urlTransfer
-     *
-     * @return \Generated\Shared\Transfer\UrlTransfer
-     */
     public function updateUrl(UrlTransfer $urlTransfer): UrlTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\UrlTransfer $urlTransfer
-     *
-     * @return \Generated\Shared\Transfer\UrlTransfer
-     */
     public function createUrl(UrlTransfer $urlTransfer): UrlTransfer;
 }

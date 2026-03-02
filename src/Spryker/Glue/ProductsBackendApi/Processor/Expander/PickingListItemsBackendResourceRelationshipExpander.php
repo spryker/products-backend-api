@@ -23,10 +23,6 @@ class PickingListItemsBackendResourceRelationshipExpander implements PickingList
      */
     protected ConcreteProductResourceRelationshipReaderInterface $concreteProductResourceRelationshipReader;
 
-    /**
-     * @param \Spryker\Glue\ProductsBackendApi\Processor\Filter\PickingListItemResourceFilterInterface $pickingListItemResourceFilter
-     * @param \Spryker\Glue\ProductsBackendApi\Processor\Reader\ConcreteProductResourceRelationshipReaderInterface $concreteProductResourceRelationshipReader
-     */
     public function __construct(
         PickingListItemResourceFilterInterface $pickingListItemResourceFilter,
         ConcreteProductResourceRelationshipReaderInterface $concreteProductResourceRelationshipReader

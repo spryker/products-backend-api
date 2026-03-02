@@ -42,9 +42,6 @@ use Spryker\Glue\ProductsBackendApi\Processor\Updater\UrlUpdaterInterface;
 
 class ProductsBackendApiFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Processor\Reader\ProductAbstractReaderInterface
-     */
     public function createProductAbstractReader(): ProductAbstractReaderInterface
     {
         return new ProductAbstractReader(
@@ -56,9 +53,6 @@ class ProductsBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Processor\Creator\ProductAbstractCreatorInterface
-     */
     public function createProductAbstractCreator(): ProductAbstractCreatorInterface
     {
         return new ProductAbstractCreator(
@@ -70,9 +64,6 @@ class ProductsBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Processor\Updater\ProductAbstractUpdaterInterface
-     */
     public function createProductAbstractUpdater(): ProductAbstractUpdaterInterface
     {
         return new ProductAbstractUpdater(
@@ -84,9 +75,6 @@ class ProductsBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Processor\Mapper\ProductAbstractMapperInterface
-     */
     public function createProductAbstractMapper(): ProductAbstractMapperInterface
     {
         return new ProductAbstractMapper(
@@ -96,9 +84,6 @@ class ProductsBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Processor\Updater\CategoryUpdaterInterface
-     */
     public function createCategoryUpdater(): CategoryUpdaterInterface
     {
         return new CategoryUpdater(
@@ -107,9 +92,6 @@ class ProductsBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Processor\Updater\UrlUpdaterInterface
-     */
     public function createUrlUpdater(): UrlUpdaterInterface
     {
         return new UrlUpdater(
@@ -118,9 +100,6 @@ class ProductsBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Processor\Expander\PickingListItemsBackendResourceRelationshipExpanderInterface
-     */
     public function createPickingListItemsBackendResourceRelationshipExpander(): PickingListItemsBackendResourceRelationshipExpanderInterface
     {
         return new PickingListItemsBackendResourceRelationshipExpander(
@@ -129,9 +108,6 @@ class ProductsBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Processor\Reader\ConcreteProductResourceRelationshipReaderInterface
-     */
     public function createConcreteProductResourceRelationshipReader(): ConcreteProductResourceRelationshipReaderInterface
     {
         return new ConcreteProductResourceRelationshipReader(
@@ -139,9 +115,6 @@ class ProductsBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Processor\Reader\ProductConcreteResourceReaderInterface
-     */
     public function createProductConcreteResourceReader(): ProductConcreteResourceReaderInterface
     {
         return new ProductConcreteResourceReader(
@@ -150,89 +123,56 @@ class ProductsBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Processor\Filter\PickingListItemResourceFilterInterface
-     */
     public function createPickingListItemResourceFilter(): PickingListItemResourceFilterInterface
     {
         return new PickingListItemResourceFilter();
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Processor\Mapper\ProductConcreteResourceMapperInterface
-     */
     public function createProductConcreteResourceMapper(): ProductConcreteResourceMapperInterface
     {
         return new ProductConcreteResourceMapper();
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToProductFacadeInterface
-     */
     public function getProductFacade(): ProductsBackendApiToProductFacadeInterface
     {
         return $this->getProvidedDependency(ProductsBackendApiDependencyProvider::FACADE_PRODUCT);
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Dependency\Service\ProductsBackedApiToUtilEncodingServiceInterface
-     */
     public function getUtilEncodingService(): ProductsBackedApiToUtilEncodingServiceInterface
     {
         return $this->getProvidedDependency(ProductsBackendApiDependencyProvider::SERVICE_UTIL_ENCODING);
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToTaxFacadeInterface
-     */
     public function getTaxFacade(): ProductsBackendApiToTaxFacadeInterface
     {
         return $this->getProvidedDependency(ProductsBackendApiDependencyProvider::FACADE_TAX);
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToLocaleFacadeInterface
-     */
     public function getLocaleFacade(): ProductsBackendApiToLocaleFacadeInterface
     {
         return $this->getProvidedDependency(ProductsBackendApiDependencyProvider::FACADE_LOCALE);
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToStoreFacadeInterface
-     */
     public function getStoreFacade(): ProductsBackendApiToStoreFacadeInterface
     {
         return $this->getProvidedDependency(ProductsBackendApiDependencyProvider::FACADE_STORE);
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToCategoryFacadeInterface
-     */
     public function getCategoryFacade(): ProductsBackendApiToCategoryFacadeInterface
     {
         return $this->getProvidedDependency(ProductsBackendApiDependencyProvider::FACADE_CATEGORY);
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToProductCategoryFacadeInterface
-     */
     public function getProductCategoryFacade(): ProductsBackendApiToProductCategoryFacadeInterface
     {
         return $this->getProvidedDependency(ProductsBackendApiDependencyProvider::FACADE_PRODUCT_CATEGORY);
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToProductImageFacadeInterface
-     */
     public function getProductImageFacade(): ProductsBackendApiToProductImageFacadeInterface
     {
         return $this->getProvidedDependency(ProductsBackendApiDependencyProvider::FACADE_PRODUCT_IMAGE);
     }
 
-    /**
-     * @return \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToUrlFacadeInterface
-     */
     public function getUrlFacade(): ProductsBackendApiToUrlFacadeInterface
     {
         return $this->getProvidedDependency(ProductsBackendApiDependencyProvider::FACADE_URL);

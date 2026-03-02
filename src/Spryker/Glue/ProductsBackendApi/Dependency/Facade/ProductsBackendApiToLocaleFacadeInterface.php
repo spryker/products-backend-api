@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\LocaleTransfer;
 
 interface ProductsBackendApiToLocaleFacadeInterface
 {
-    /**
-     * @param string $localeName
-     *
-     * @return \Generated\Shared\Transfer\LocaleTransfer
-     */
     public function getLocale(string $localeName): LocaleTransfer;
 
     /**

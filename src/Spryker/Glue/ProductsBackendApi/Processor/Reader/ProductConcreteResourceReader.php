@@ -24,10 +24,6 @@ class ProductConcreteResourceReader implements ProductConcreteResourceReaderInte
      */
     protected ProductConcreteResourceMapperInterface $productConcreteResourceMapper;
 
-    /**
-     * @param \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToProductFacadeInterface $productFacade
-     * @param \Spryker\Glue\ProductsBackendApi\Processor\Mapper\ProductConcreteResourceMapperInterface $productConcreteResourceMapper
-     */
     public function __construct(
         ProductsBackendApiToProductFacadeInterface $productFacade,
         ProductConcreteResourceMapperInterface $productConcreteResourceMapper
@@ -36,11 +32,6 @@ class ProductConcreteResourceReader implements ProductConcreteResourceReaderInte
         $this->productConcreteResourceMapper = $productConcreteResourceMapper;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteCriteriaTransfer $productConcreteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteResourceCollectionTransfer
-     */
     public function getProductConcreteResourceCollection(
         ProductConcreteCriteriaTransfer $productConcreteCriteriaTransfer
     ): ProductConcreteResourceCollectionTransfer {

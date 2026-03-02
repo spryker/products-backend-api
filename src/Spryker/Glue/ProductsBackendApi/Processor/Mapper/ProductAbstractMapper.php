@@ -38,11 +38,6 @@ class ProductAbstractMapper implements ProductAbstractMapperInterface
      */
     protected ProductsBackendApiToStoreFacadeInterface $storeFacade;
 
-    /**
-     * @param \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToLocaleFacadeInterface $localeFacade
-     * @param \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToTaxFacadeInterface $taxFacade
-     * @param \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToStoreFacadeInterface $storeFacade
-     */
     public function __construct(
         ProductsBackendApiToLocaleFacadeInterface $localeFacade,
         ProductsBackendApiToTaxFacadeInterface $taxFacade,
@@ -53,12 +48,6 @@ class ProductAbstractMapper implements ProductAbstractMapperInterface
         $this->storeFacade = $storeFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer
-     * @param \Generated\Shared\Transfer\ProductAbstractTransfer $productAbstractTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductAbstractTransfer
-     */
     public function mapProductsBackendApiAttributesTransferToProductAbstractTransfer(
         ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer,
         ProductAbstractTransfer $productAbstractTransfer
@@ -117,12 +106,6 @@ class ProductAbstractMapper implements ProductAbstractMapperInterface
         return $productConcreteTransfers;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer
-     * @param \Generated\Shared\Transfer\ProductAbstractTransfer $productAbstractTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductAbstractTransfer
-     */
     protected function mapTaxSetId(
         ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer,
         ProductAbstractTransfer $productAbstractTransfer
@@ -145,11 +128,6 @@ class ProductAbstractMapper implements ProductAbstractMapperInterface
         return $productAbstractTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreRelationTransfer
-     */
     protected function mapStoreRelations(ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer): StoreRelationTransfer
     {
         $storeTransfers = $this->storeFacade->getStoreTransfersByStoreNames($productsBackendApiAttributesTransfer->getStores());

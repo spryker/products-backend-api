@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\CategoryCriteriaTransfer;
 
 interface ProductsBackendApiToCategoryFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CategoryCriteriaTransfer $categoryCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryCollectionTransfer
-     */
     public function getCategoryCollection(CategoryCriteriaTransfer $categoryCriteriaTransfer): CategoryCollectionTransfer;
 }

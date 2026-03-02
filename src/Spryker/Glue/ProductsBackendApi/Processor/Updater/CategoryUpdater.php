@@ -27,10 +27,6 @@ class CategoryUpdater implements CategoryUpdaterInterface
      */
     protected ProductsBackendApiToProductCategoryFacadeInterface $productCategoryFacade;
 
-    /**
-     * @param \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToCategoryFacadeInterface $categoryFacade
-     * @param \Spryker\Glue\ProductsBackendApi\Dependency\Facade\ProductsBackendApiToProductCategoryFacadeInterface $productCategoryFacade
-     */
     public function __construct(
         ProductsBackendApiToCategoryFacadeInterface $categoryFacade,
         ProductsBackendApiToProductCategoryFacadeInterface $productCategoryFacade
@@ -39,12 +35,6 @@ class CategoryUpdater implements CategoryUpdaterInterface
         $this->productCategoryFacade = $productCategoryFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer
-     * @param int $idProductAbstract
-     *
-     * @return void
-     */
     public function createCategoryAssignment(ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer, int $idProductAbstract): void
     {
         $categoryKeys = [];
@@ -64,12 +54,6 @@ class CategoryUpdater implements CategoryUpdaterInterface
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer
-     * @param int $idProductAbstract
-     *
-     * @return void
-     */
     public function updateCategories(ProductsBackendApiAttributesTransfer $productsBackendApiAttributesTransfer, int $idProductAbstract): void
     {
         $productCategoryCollectionTransfer = $this->productCategoryFacade->getProductCategoryCollection(
